@@ -1,14 +1,29 @@
-<main class="w-screen h-[80px] bg-red-100 flex items-center justify-center">
-    <nav class="flex flex-row items-center justify-between w-[1800px] ">
-       <img class="w-[160px]" src="../../../assets/mynikkahlogo.png" alt="">
+<main class="w-screen h-[60px] md:h-[70px] lg-h[100px] bg-red-100 flex items-center justify-center">
+    <nav class="flex flex-row items-center justify-between w-screen pl-6 pr-6  ">
+       <img class="w-[90px]  md:w-[100px] lg:w-[110px] " src="../../../assets/mynikkahlogo.png" alt="">
 
-        <div>
-            <ul class="flex flex-row gap-12 text-xl  items-center">
-                <li class="hover:text-rose-800">Home</li>
-                <li class="hover:text-rose-800">About Us</li>
-                <li class="hover:text-rose-800"> Profile</li>
-                <button class="text-white h-[40px] text-lg font-bold w-[100px] rounded-lg bg-violet-900">Login</button>
+        <div class="hidden md:block lg:block">
+            <ul class="flex flex-row gap-12 lg:text-xl md:text-lg ">
+                <li class="hover:text-rose-800 ">Home</li>
+                <li class="hover:text-rose-800 ">About Us</li>
+                <li class="hover:text-rose-800 "> Profile</li>
+                <button class="text-white md:h-[30px] w-[90px] lg:h-[40px] lg:w-[100px] md:text-sm lg:text-lg font-bold  rounded-lg bg-violet-900">Login</button>
             </ul>
         </div>
+        
+        <button  (click)="menubtn()" class="block  md:hidden lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"  stroke="#4C1D95" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+              
+        </button>
     </nav>
 </main>
+<div class="pl-6 " [hidden]="menu">
+    <ul class="flex flex-col gap-8 text-md   ">
+        <li class="hover:text-rose-800 ">Home</li>
+        <li class="hover:text-rose-800 ">About Us</li>
+        <li class="hover:text-rose-800 "> Profile</li>
+        <button  class="text-white h-[40px] text-lg font-bold w-[100px] rounded-lg bg-violet-900">Login</button>
+    </ul>
+</div>
