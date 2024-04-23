@@ -3,13 +3,15 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {},
-    screens:{
-      'XS': '540px',
-      'SM': '722px',
-      'MD': '830px',
-      'LG': '1460px'
-
-    }
+    screens: {
+      'sm': '640px',  // Default small breakpoint
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+      'custom-sm': {'min': '530px', 'max': '767px'},
+      'custom-lg': {'min':'1150px' , 'max': '1287px'},
+    },
   },
   plugins: [],
 }
