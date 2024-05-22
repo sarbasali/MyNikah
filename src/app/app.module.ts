@@ -9,12 +9,9 @@ import { HomeComponent } from './component/home/home.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 // import { RegisterComponent } from './component/register/register.component';
 import { RegisterComponent } from './component/register/register.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatIconModule} from '@angular/material/icon';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatButtonModule} from '@angular/material/button';
-
 
 @NgModule({
   declarations: [
@@ -29,14 +26,15 @@ import {MatButtonModule} from '@angular/material/button';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    MatIconModule,
-    MatDividerModule,
-    MatButtonModule
+    MatTabsModule,
+    BrowserAnimationsModule
+    
 
   ],
   providers: [
     // provideAnimationsAsync()
+  
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })
