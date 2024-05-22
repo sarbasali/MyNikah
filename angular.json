@@ -66,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Easy-Nikah:build:production"
+              "buildTarget": "Easy-Nikah:build:production"
             },
             "development": {
-              "browserTarget": "Easy-Nikah:build:development"
+              "buildTarget": "Easy-Nikah:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -77,7 +77,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Easy-Nikah:build"
+            "buildTarget": "Easy-Nikah:build"
           }
         },
         "test": {
